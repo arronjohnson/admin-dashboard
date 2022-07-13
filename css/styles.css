@@ -70,9 +70,7 @@ body {
 }
 
 .sidebar-links a:hover {
-  background-color: #fff;
-  color: #000;
-  padding-left: 11px;
+  background-color: #086d9b;
 }
 
 .sidebar-links svg {
