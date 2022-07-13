@@ -20,8 +20,8 @@ body {
   display: grid;
   font-family: "Roboto", sans-serif;
   grid-template:
-    "sidebar header"
-    "sidebar content"
+    "sidebar header" auto
+    "sidebar content" 1fr
     / 1fr 5fr;
 }
 
@@ -89,4 +89,40 @@ body {
   background-color: var(--color-secondary);
   grid-area: content;
   padding: 16px;
+}
+
+.card-container {
+  width: 400px;
+}
+
+.card {
+  background-color: #fff;
+  border-left: 8px solid var(--color-accent);
+  border-radius: 8px;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+  display: grid;
+  padding: 24px;
+}
+
+.card h4 {
+  font-size: 1.1rem;
+}
+
+.card h4,
+.card p {
+  margin: 0;
+}
+
+.card p {
+  color: #525252;
+  margin-top: 4px;
+}
+
+.card-buttons {
+  justify-self: end;
+  margin-top: 16px;
+}
+
+.card svg {
+  font-size: 1.5rem;
 }
