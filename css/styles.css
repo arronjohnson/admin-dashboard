@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+:root {
+  --color-primary: #0ea5e9;
+  --color-secondary: #f1f5f9;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -20,13 +25,20 @@ body {
 }
 
 .sidebar {
+  background-color: var(--color-primary);
+  color: white;
   grid-area: sidebar;
+  z-index: 2;
 }
 
 .header {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   grid-area: header;
+  z-index: 1;
 }
 
 .content {
+  background-color: var(--color-secondary);
   grid-area: content;
+  padding: 16px;
 }
