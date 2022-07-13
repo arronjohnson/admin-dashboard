@@ -11,5 +11,22 @@ html {
 }
 
 body {
+  display: grid;
   font-family: "Roboto", sans-serif;
+  grid-template:
+    "sidebar header"
+    "sidebar content"
+    / 1fr 5fr;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.header {
+  grid-area: header;
+}
+
+.content {
+  grid-area: content;
 }
