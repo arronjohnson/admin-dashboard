@@ -4,7 +4,7 @@
   --color-accent: #eab308;
   --color-description: #525252;
   --color-primary: #0c9cde;
-  --color-secondary: #f1f5f9;
+  --color-secondary: #e6edf4;
 }
 
 html {
@@ -87,8 +87,87 @@ body {
 *********************************/
 .header {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  display: grid;
+  gap: 16px;
   grid-area: header;
+  grid-template-columns: 1.5fr 1fr;
+  padding: 16px 32px;
   z-index: 1;
+}
+
+.header div {
+  align-items: center;
+  display: flex;
+}
+
+.header svg {
+  font-size: 1.6rem;
+}
+
+.searchbar {
+  gap: 16px;
+}
+
+.searchbar input[type="search"] {
+  background-color: var(--color-secondary);
+  border: 0;
+  border-radius: 16px;
+  flex: 1;
+  font-size: 1.2rem;
+  height: 35px;
+  padding: 8px 16px;
+  max-width: 600px;
+}
+
+.user h3 {
+  margin: 0;
+}
+
+.greeting {
+  font-weight: 700;
+  gap: 16px;
+}
+
+.greeting svg {
+  font-size: 5rem;
+}
+
+.greeting h2 {
+  margin: 4px 0 0;
+}
+
+.user svg:nth-child(1) {
+  cursor: pointer;
+}
+
+.user svg:nth-child(2) {
+  font-size: 3rem;
+}
+
+.header .user,
+.header .buttons {
+  gap: 32px;
+  justify-self: end;
+}
+
+.header button {
+  background-color: var(--color-primary);
+  border: 0;
+  border-radius: 32px;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 0;
+  transition: 0.2s transform ease-in-out;
+  width: 120px;
+}
+
+.header button:hover {
+  background-color: #086d9b;
+  cursor: pointer;
+}
+
+.header button:active {
+  transform: scale(0.96);
 }
 
 /*********************************
@@ -123,6 +202,7 @@ body {
   border-left: 8px solid var(--color-accent);
   display: grid;
   grid-template-rows: max-content auto 1fr;
+  padding: 24px;
 }
 
 .card h4 {
@@ -160,14 +240,18 @@ body {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
-  padding: 24px;
 }
 
 /*********************************
   Aside
 *********************************/
+.bubble {
+  padding: 32px;
+}
+
 .bubble .description {
   color: var(--color-description);
+  font-size: 0.9rem;
 }
 
 .announcements h4 {
@@ -179,7 +263,7 @@ body {
 }
 
 .announcements hr {
-  margin: 16px 0;
+  margin: 16px -8px;
 }
 
 .trending {
