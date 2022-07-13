@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 :root {
-  --color-primary: #0ea5e9;
+  --color-accent: #eab308;
+  --color-primary: #0c9cde;
   --color-secondary: #f1f5f9;
 }
 
@@ -27,8 +28,55 @@ body {
 .sidebar {
   background-color: var(--color-primary);
   color: white;
+  display: grid;
+  gap: 32px;
   grid-area: sidebar;
+  grid-template-rows: auto auto 1fr;
   z-index: 2;
+}
+
+.sidebar-logo {
+  padding: 16px;
+}
+
+.sidebar-logo svg {
+  font-size: 3rem;
+}
+
+.sidebar-logo h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.sidebar-logo,
+.sidebar-links a {
+  align-items: center;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 3rem 1fr;
+}
+
+.sidebar-links:last-of-type {
+  align-self: end;
+}
+
+.sidebar-links a {
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.sidebar-links a:hover {
+  background-color: var(--color-secondary);
+  border-left: 5px solid var(--color-accent);
+  color: black;
+  padding-left: 11px;
+}
+
+.sidebar-links svg {
+  font-size: 2rem;
+  justify-self: center;
 }
 
 .header {
