@@ -8,6 +8,7 @@
 
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 *,
@@ -23,6 +24,7 @@ body {
     "sidebar header" auto
     "sidebar content" 1fr
     / 1fr 5fr;
+  min-height: 100%;
 }
 
 .sidebar {
@@ -68,9 +70,8 @@ body {
 }
 
 .sidebar-links a:hover {
-  background-color: var(--color-secondary);
-  border-left: 5px solid var(--color-accent);
-  color: black;
+  background-color: #fff;
+  color: #000;
   padding-left: 11px;
 }
 
@@ -91,23 +92,29 @@ body {
   grid-area: content;
   grid-template: 1fr 1fr / 5fr 1fr;
   padding: 20px;
+  padding-right: 40px;
+}
+
+.content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
 }
 
 .projects {
   grid-row: 1 / 3;
+  margin-right: 20px;
 }
 
 .card-container {
-  width: 400px;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
 .card {
-  background-color: #fff;
   border-left: 8px solid var(--color-accent);
-  border-radius: 8px;
-  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
   display: grid;
-  padding: 24px;
+  grid-template-rows: max-content auto 1fr;
 }
 
 .card h4 {
@@ -125,10 +132,36 @@ body {
 }
 
 .card-buttons {
-  justify-self: end;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1.5rem);
   margin-top: 16px;
+  place-self: end;
 }
 
 .card svg {
   font-size: 1.5rem;
+}
+
+.card svg:hover {
+  cursor: pointer;
+}
+
+.header,
+.card,
+.bubble {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+
+@media (max-width: 1100px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .projects {
+    margin-right: 0;
+  }
 }
