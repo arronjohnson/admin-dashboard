@@ -120,7 +120,7 @@ body {
   max-width: 600px;
 }
 
-.hamburger,
+.header .hamburger,
 .hamburger-close {
   cursor: pointer;
   display: none;
@@ -324,9 +324,10 @@ body {
     margin-right: 0;
   }
 
-  .hamburger,
+  .header .hamburger,
   .hamburger-close {
-    display: unset;
+    display: grid;
+    place-content: center;
   }
 
   .header {
