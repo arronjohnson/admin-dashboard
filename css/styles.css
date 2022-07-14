@@ -74,6 +74,7 @@ body {
   text-decoration: none;
 }
 
+.sidebar-links a:focus-visible,
 .sidebar-links a:hover {
   background-color: #086d9b;
 }
@@ -168,8 +169,12 @@ body {
   width: 120px;
 }
 
+.header button:focus-visible,
 .header button:hover {
   background-color: #086d9b;
+}
+
+.header button:hover {
   cursor: pointer;
 }
 
